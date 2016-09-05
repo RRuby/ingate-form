@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: ingate-form-development
+
+test:
+  <<: *default
+  database: ingate-form-test
+
+production:
+  <<: *default
+  database: ingate-form-production

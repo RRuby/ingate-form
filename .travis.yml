@@ -1,0 +1,19 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - 2.2.3
+
+env:
+  global:
+    - SECRET_KEY='ad57a0140e4e6025b85026e7ef9d77d97fc395d14ccc65'
+    - SECRET_KEY_BASE='efdf5cc4dfc00f53789198fb919b5019bb14fad4d1cbe0'
+    - SECRET_TOKEN='af9bc49e8decba69e71db4916a3acf516e7d7e0bb0872f'
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
+
+before_script:
+  - cp config/database.travis.yml config/database.yml

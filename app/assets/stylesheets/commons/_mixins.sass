@@ -1,0 +1,143 @@
+=opacity($value)
+  $IEValue: $value*100
+  opacity: $value
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")"
+  filter: alpha(opacity=$IEValue)
+
+=appearance($appearance)
+  -webkit-appearance: $appearance
+  -moz-appearance: $appearance
+  -ms-appearance: $appearance
+  -o-transform: $appearance
+  appearance: $appearance
+
+=inline-block
+  position: relative
+  display: -moz-inline-stack
+  display: inline-block
+  overflow: hidden
+  vertical-align: middle
+  *display: inline
+  *zoom: 1
+
+=box-shadow($shadow)
+  -webkit-box-shadow: $shadow
+  -moz-box-shadow: $shadow
+  box-shadow: $shadow
+
+=text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, 0.4))
+  text-shadow: $x $y $blur $color
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=border-top-left-radius($radius)
+  -webkit-border-top-left-radius: $radius
+  -moz-border-radius-topleft: $radius
+  border-top-left-radius: $radius
+
+=border-top-right-radius($radius)
+  -webkit-border-top-right-radius: $radius
+  -moz-border-radius-topright: $radius
+  border-top-right-radius: $radius
+
+=border-bottom-left-radius($radius)
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+
+=border-bottom-right-radius($radius)
+  -webkit-border-bottom-right-radius: $radius
+  -moz-border-radius-bottomright: $radius
+  border-bottom-right-radius: $radius
+
+=transform($transform)
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+  transform: $transform
+
+=rotate($degrees)
+  -webkit-transform: rotate($degrees)
+  -moz-transform: rotate($degrees)
+  -ms-transform: rotate($degrees)
+  -o-transform: rotate($degrees)
+  transform: rotate($degrees)
+
+=scale($ratio)
+  -webkit-transform: scale($ratio)
+  -moz-transform: scale($ratio)
+  -ms-transform: scale($ratio)
+  -o-transform: scale($ratio)
+  transform: scale($ratio)
+
+=translate($x, $y)
+  -webkit-transform: translate($x, $y)
+  -moz-transform: translate($x, $y)
+  -ms-transform: translate($x, $y)
+  -o-transform: translate($x, $y)
+  transform: translate($x, $y)
+
+=translateX($value)
+  -webkit-transform: translateX($value)
+  -moz-transform: translateX($value)
+  -ms-transform: translateX($value)
+  -o-transform: translateX($value)
+  transform: translateX($value)
+
+=translateY($value)
+  -webkit-transform: translateY($value)
+  -moz-transform: translateY($value)
+  -ms-transform: translateY($value)
+  -o-transform: translateY($value)
+  transform: translateY($value)
+
+=transitions($transition)
+  -webkit-transition: $transition
+  -moz-transition: $transition
+  -o-transition: $transition
+  transition: $transition
+
+=translate3d($x, $y, $z)
+  -webkit-transform: translate3d($x, $y, $z)
+  -moz-transform: translate3d($x, $y, $z)
+  -o-transform: translate3d($x, $y, $z)
+  transform: translate3d($x, $y, $z)
+
+=animation($animation)
+  -webkit-animation: $animation
+  -moz-animation: $animation
+  -o-animation: $animation
+  animation: $animation
+
+=keyframes($animation)
+  @-webkit-keyframes #{$animation}
+    @content
+
+=vertical-gradient($startColor: #555, $endColor: #333)
+  background-color: mix($startColor, $endColor, 60%)
+  background-image: -moz-linear-gradient(top, $startColor, $endColor)
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor))
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor)
+  background-image: -o-linear-gradient(top, $startColor, $endColor)
+  background-image: linear-gradient(to bottom, $startColor, $endColor)
+  background-repeat: repeat-x
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0)
+
+=blur($value)
+  -webkit-filter: blur($value)
+  -moz-filter: blur($value)
+  -o-filter: blur($value)
+  -ms-filter: blur($value)
+  filter: blur($value)
+
+=hidden
+  +opacity(0)
+  visibility: hidden
+
+=visible
+  +opacity(1)
+  visibility: visible
