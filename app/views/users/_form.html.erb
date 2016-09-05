@@ -1,0 +1,9 @@
+<%= simple_form_for(User.new, url: users_path, html: { 'data-parsley-validate' => true }) do |f| %>
+  <%= f.input :full_name, as: :string, placeholder: t('placeholders.full_name') %>
+  <%= f.input :phone, input_html: { 'data-parsley-pattern' => '^[+]?([0-9][\s-]?){10,13}$' }, placeholder: t('placeholders.phone') %>
+  <%= f.input :email, placeholder: t('placeholders.email') %>
+
+  <div class="actions">
+    <%= f.submit t('buttons.submit'), :class => 'btn btn-sm btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+ru:
+  buttons:
+    submit: Отправить
+
+  pages:
+    users:
+      index: Заполните форму
+
+  notice:
+    success: Успешно добавлен!
+    failure: Произошла ошибка
+
+  placeholders:
+    full_name: Иванов Иван Иванович
+    phone: +7-999-000-0000
+    email: ivanov@ya.ru
+
+  activerecord:
+    attributes:
+      user:
+        id: '№'
+        full_name: ФИО
+        phone: Телефон
+        email: 'E-mail'

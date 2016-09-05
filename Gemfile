@@ -8,6 +8,7 @@ group :default do
   gem 'coffee-rails',                  '~> 4.1.0'
   gem 'dotenv-rails'
   gem 'jquery-rails'
+  gem 'parsley-rails'
   gem 'pg'
   gem 'rails',                         '~> 4.2.7.1'
   gem 'russian'

@@ -106,6 +106,8 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    parsley-rails (2.0.7.0)
+      railties (>= 3.0.0)
     pg (0.18.4)
     pkg-config (1.1.7)
     poltergeist (1.10.0)
@@ -220,6 +222,7 @@ DEPENDENCIES
   ffaker
   hirb
   jquery-rails
+  parsley-rails
   pg
   poltergeist
   puma
